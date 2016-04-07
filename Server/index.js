@@ -10,6 +10,7 @@ app.use(bodyParser.json())
 
 var successQuery = "Successfully executed (1) query.";
 
+// IMPORTANT: Change the 'host', 'user', 'password', and 'database' values according to your database configuration. 
 var connection = mysql.createConnection({
     host: 'YOUR_HOST', // Host will usually be 'localhost'
     user: 'YOUR_USERNAME',
