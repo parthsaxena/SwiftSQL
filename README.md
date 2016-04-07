@@ -3,13 +3,17 @@ An extremely easy and expandable framework for SQL connections in Swift.
 
 ## About
 **Please note that a server is required for this.**
+
 Let me explain how requests are routed in this application. The client will first make a **Post** HTTP request with the query as a parameter to our NodeJS server. The server then executes the query and returns the *response* **OR** returns whether the query ran successful or not. In the Swift file, there are two standard functions which will make queries to the server. One which serves for queries like: **"SELECT * FROM ..."**. In this case, the server would respond with the data in JSON format. The other function is for queries which serve to update or create information in the database. In this case, the server would respond with a **"1"** for a successful query or a **"0"** for a failed query. 
 
 ## Installation
 Pull this repository and transfer the file *ConnectionManager.swift* in the *Swift* folder to your Xcode project. In the Swift file change the `QUERY_URL`, `SIMPLE_QUERY_URL`, `AUTH_URL`, and `TEST_URL` variables according to your server.
 
-Next, make sure you have NodeJS installed on your server. Once you are sure, navigate to the *Server*  folder and run: 
-`node server.js`. If for some reason you recieve an error, try running `npm install`. Please contact me if this doesn't work. 
+Next, change the values of `host`, `user`, `password`, and `database` in the file *index.js* in the *Server* folder.
+
+Also, make sure you have Node.js installed on your server. Once you are sure, navigate to the *Server*  folder and run: 
+`node index.js`. If for some reason you recieve an error, try running `npm install`. Please contact me if this doesn't work. 
+
 ## Usage
 I have included some built-in example functions in the Swift file. These include a standard `authenticateUser` function, `testConnection` function, `complexQuery` function, `executeQuery` function, and a `retrievePosts` function as a template to code your own function. The `testConnection` function simply tests the connection to the server. The `authenticateUser` simply authenticates a user based on the *username* and *password* strings. The `complexQuery` function allows you to run a query and retrieve the data in JSON format. The `executeQuery` function allows you to run a query and see whether it was executed successfully or not.
 
