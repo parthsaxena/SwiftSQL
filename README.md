@@ -4,7 +4,7 @@ A framework to facilitate SQL connections in Swift using a host server to route 
 ## Installation
 Transfer `ConnectionManager.swift` in the `Swift` folder to your Xcode project. Change the `QUERY_URL`, `SIMPLE_QUERY_URL`, `AUTH_URL`, and `TEST_URL` variables according to your server configuration. 
 
-Similarly, Change the values of `host`, `user`, `password`, and `database` in `index.js` in the `Server` folder.
+Similarly, change the values of `host`, `user`, `password`, and `database` in `index.js` in the `Server` folder.
 
 Make sure [Node.js](https://nodejs.org) is installed on your server. Run `npm install` to install dependencies and `node index.js` to start the server.
 
